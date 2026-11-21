@@ -64,7 +64,7 @@ function initPlMatchingElem(container_elem_ref) {
 }
 
 function initPlMatchingElems() {
-  document.querySelectorAll(".pl-matching-container")
+  document.querySelectorAll(".pl-matching-container[data-answers-name]")
     .forEach(initPlMatchingElem);
 }
 

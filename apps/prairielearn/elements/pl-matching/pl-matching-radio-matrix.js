@@ -61,7 +61,7 @@ function initPlMatchingRadioMatrixElem(container_elem_ref) {
 }
 
 function initPlMatchingRadioMatrixElems() {
-  document.querySelectorAll(".pl-matching-radio-matrix-container")
+  document.querySelectorAll(".pl-matching-radio-matrix-container[data-answers-name]")
     .forEach(initPlMatchingRadioMatrixElem);
 }
 
