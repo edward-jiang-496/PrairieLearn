@@ -1,0 +1,11 @@
+{
+  "controller": "pl-radio-matrix.py",
+  "dependencies": {
+    "elementScripts": [
+    "pl-radio-matrix.js"
+  ],
+    "elementStyles": [
+      "pl-radio-matrix.css"
+    ]
+  }
+}
