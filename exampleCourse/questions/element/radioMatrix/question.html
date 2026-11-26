@@ -2,20 +2,22 @@
     <pl-question-panel>
         <div id="ex1-title"><b>Example 1: <code>radio-matrix</code></b></div>
         <p>
-            Select the capital city for each nation. 
+            Match each nation with its capital city. 
+            In this example, the options are implicitly created by each statement's <code>match</code> attribute.
+            Only distractor options need to be added manually. 
+            All statements and options are displayed by default.
         </p>
     </pl-question-panel>
         
     <pl-radio-matrix answers-name="ex1" radio-matrix-statement-column-width="20%">
-        <pl-statement match="dc">US</pl-statement>
-        <pl-statement match="mexico">Mexico</pl-statement>
-        <pl-statement match="paris">France</pl-statement>
-        <pl-option name="dc">Washington DC</pl-option>
-        <pl-option name="nyc">New York City</pl-option>
-        <pl-option name="mexico">Mexico City</pl-option>
-        <pl-option name="wellington">Wellington</pl-option>
-        <pl-option name="tokyo">Tokyo</pl-option>
-        <pl-option name="paris">Paris</pl-option>
+        <pl-statement match="Ottawa">Canada</pl-statement>
+        <pl-statement match="Washington, D.C.">United States</pl-statement>
+        <pl-statement match="Mexico City">Mexico</pl-statement>
+        <pl-statement match="Paris">France</pl-statement>
+        
+        <pl-option>Tijuana</pl-option>
+        <pl-option>Toronto</pl-option>
+        <pl-option>New York City</pl-option>
     </pl-radio-matrix >
 </pl-card>
 
