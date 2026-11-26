@@ -1,0 +1,146 @@
+<pl-card>
+    <pl-question-panel>
+        <div id="ex1-title"><b>Example 1: <code>radio-matrix</code></b></div>
+        <p>
+            Select the capital city for each nation. 
+        </p>
+    </pl-question-panel>
+        
+    <pl-radio-matrix answers-name="ex1" radio-matrix-statement-column-width="20%">
+        <pl-statement match="dc">US</pl-statement>
+        <pl-statement match="mexico">Mexico</pl-statement>
+        <pl-statement match="paris">France</pl-statement>
+        <pl-option name="dc">Washington DC</pl-option>
+        <pl-option name="nyc">New York City</pl-option>
+        <pl-option name="mexico">Mexico City</pl-option>
+        <pl-option name="wellington">Wellington</pl-option>
+        <pl-option name="tokyo">Tokyo</pl-option>
+        <pl-option name="paris">Paris</pl-option>
+    </pl-radio-matrix >
+</pl-card>
+
+<pl-card>
+    <pl-question-panel>
+        <div id="ex2-title"><b>Example 2: <code>radio-matrix</code> Graded Ranking Question</b></div>
+        <p>
+            The <code>radio-matrix</code> style is also ideal for constructing graded questions with limited selection per row or column. 
+        </p>
+        <ul>
+            <li>Setting <code>reset-button="true"</code> adds a reset button to the element.</li>
+            <li>Setting <code>max-response-per-option="1"</code> invalidates the submission if a column is selected 2 or more times.</li>
+            <li>Setting <code>min-response-per-option="1"</code> invalidates the submission if a column is left unselected.</li>
+        </ul>
+        <p>
+            You need to assign 3 background worker jobs (Rows) to 3 specialized server nodes (Columns).
+        </p>
+        <p>
+            Placement Constraints:
+        <ul>
+            <li>Uniform Row Constraint: Each job must be assigned to exactly 1 server node. </li>
+            <li>Uniform Column Constraint: Each server node can host between 1 and 1 job.</li>
+        </ul>
+        </p>
+        <p>
+            Resource Requirements:
+        <ul>
+            <li>Job 1 (Video Renderer): Requires 64 GB RAM.</li>
+            <li>Job 2 (In-Memory Cache): Requires 128 GB RAM.</li>
+            <li>Job 3 (Log Parser): Requires 16 GB RAM.</li>
+            <li>Node X 32GB RAM</li>
+            <li>Node Y 64GB RAM</li>
+            <li>Node Z 256GB RAM</li>
+        </ul>
+        </p>
+    </pl-question-panel>
+        
+    <pl-radio-matrix aria-label="Server Matching" allow-blank="false" answers-name="ex2"   fixed-order = "true" fixed-options-order="true" reset-button="true" max-response-per-option="1" min-response-per-option="1">
+        <pl-statement match ="y64">Job 1 (64GB needed) </pl-statement>
+        <pl-statement match ="z256">Job 2 (128 GB needed)</pl-statement>
+        <pl-statement match ="x32">Job 3 (16 GB needed)</pl-statement>
+        <pl-option name ="x32">Node X (32GB)</pl-option>
+        <pl-option name ="y64">Node Y (64GB)</pl-option>
+        <pl-option name ="z256">Node Z (256GB)</pl-option>
+    </pl-radio-matrix>
+</pl-card>
+
+<pl-card>
+    <pl-question-panel>
+        <div id="ex3-title"><b>Example 3: <code>radio-matrix</code> Ungraded Ranking Survey</b></div>
+        <p>
+            The <code>radio-matrix</code> style is also ideal for constructing ungraded ranking survey questions. 
+        </p>
+        <ul>
+            <li>
+                You can use <code>builtin-grading="false"</code> to disable the grading. 
+                In addition, when <code>builtin-grading="false"</code>, all options need to be explicitly defined with <code>pl-option</code> or preset options. 
+            </li>
+            <li><code>allow-blank="false"</code> means students must choose an option per row.</li>
+            <li>Setting <code>reset-button="true"</code> adds a reset button to the element.</li>
+            <li>Setting <code>max-response-per-option="2"</code> invalidates the submission if a column is selected 3 or more times.</li>
+            <li>Setting <code>min-response-per-option="1"</code> invalidates the submission if a column is left unselected.</li>
+        </ul>
+        <p>
+            Please rank the following departments based on your interests
+        </p>
+    </pl-question-panel>
+        
+    <pl-radio-matrix 
+        aria-label="Job Survey" 
+        allow-blank="false" 
+        answers-name="ex3" 
+        builtin-grading="false" 
+        fixed-options-order="true" 
+        max-response-per-option="2" 
+        min-response-per-option="1"
+        reset-button="true" 
+    >
+        <pl-statement>Engineering</pl-statement>
+        <pl-statement>Marketing</pl-statement>
+        <pl-statement>HR</pl-statement>
+        <pl-statement>Advertising</pl-statement>
+        <pl-option>Top choice</pl-option>
+        <pl-option>Neutral</pl-option>
+        <pl-option>Not considered</pl-option>
+    </pl-radio-matrix>
+</pl-card>
+
+
+<pl-card>
+    <pl-question-panel>
+        <div id="ex4-title"><b>Example 4: <code>radio-matrix</code> Ungraded Survey</b></div>
+        <p>
+            The <code>radio-matrix</code> style is ideal for constructing ungraded survey questions. 
+        </p>
+        <ul>
+            <li>
+                You can use <code>builtin-grading="false"</code> to disable the grading. 
+                In addition, when <code>builtin-grading="false"</code>, all options need to be explicitly defined with <code>pl-option</code> or preset options. 
+            </li>
+            <li><code>allow-blank="true"</code> permits students to submit without selecting an option.</li>
+            <li>Furthermore, you can use <code>preset-options="agreement-5"</code> to use predefined Likert <code>agreement-5</code> options.</li>
+            <li>When <code>repeat-header="1,3"</code> is set, the radio-matrix repeats the options header in a repeating "header, 1 row, header, 3 rows" pattern.</li>
+            <li>Setting <code>reset-button="true"</code> adds a reset button to the element.</li>
+        </ul>
+        <p>The below <code>radio-matrix</code> evaluation form is modeled after the <a href="https://provost.illinois.edu/faculty-affairs/unit-executive-officer-resources/holistic-teaching-feedback-and-evaluation/definition-of-teaching-excellence/">Campus-Wide Definition of Teaching Excellence</a> at the University of Illinois Urbana-Champaign.</p>
+    </pl-question-panel>
+        
+    <pl-radio-matrix 
+        answers-name="ex4" 
+        aria-label="Course Evaluation Survey"
+        allow-blank="true" 
+        builtin-grading="false" 
+        fixed-options-order="True" 
+        preset-options="agreement-5" 
+        repeat-header="1,3" 
+        reset-button="true"
+    >
+        <pl-statement>The course creates clear learning objectives3 that are both challenging and attainable, and intersect with the overall course goals.</pl-statement>
+        <pl-statement>The course Designs student-centered learning and assessment experiences that support the learning objectives.</pl-statement>
+        <pl-statement>The course provides readily available, coherently organized, and high quality course materials (including syllabi) that establish student workload, learning objectives, performance criteria, grading procedures, and class policy expectations.</pl-statement>
+        <pl-statement>The course organizes and manages class time and students' activities in and out of class to yield high levels of student learning.</pl-statement>
+        <pl-statement>The course models and fosters critical, analytical, and creative thinking.  </pl-statement>
+        <pl-statement>The course communicates content clearly with students.</pl-statement>
+        <pl-statement>The course has constructive and timely written and oral communication with students. </pl-statement>
+        <pl-statement>The course gives timely, useful, and fair feedback on activities and assignments tied to performance criteria and learning objectives. </pl-statement>
+    </pl-radio-matrix>
+</pl-card>
