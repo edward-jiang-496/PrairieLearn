@@ -59,6 +59,8 @@ function initPlRadioMatrixElem(container_elem_ref) {
       }
     );
   }
+
+  updateRadioMatrixMaxOptionsWarning(container_elem_ref);
 }
 
 function initPlRadioMatrixElems() {
