@@ -123,3 +123,11 @@ You can use the following predefined presets for common options like Likert agre
 | `"frequency-5"`    | "Never", "Rarely", "Sometimes", "Often", "Always"                                                                                    |
 | `"frequency-6"`    | "Never", "Rarely", "Infrequently", "Frequently", "Often", "Always"                                                                   |
 | `"frequency-7"`    | "Never", "Rarely", "Infrequently", "Sometimes", "Frequently", "Often", "Always"                                                      |
+
+## Example Implementation
+
+- [element/radioMatrix]
+
+---
+
+[element/radioMatrix]: https://github.com/PrairieLearn/PrairieLearn/tree/master/exampleCourse/questions/element/radioMatrix
